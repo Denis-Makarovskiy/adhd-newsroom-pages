@@ -6,141 +6,127 @@
 <title>Body doubling при СДВГ — ADHD Newsroom</title>
 <style>
 :root{
-  --bg:#faf9f7; --card:#fff; --ink:#1c1b1a; --muted:#6b6862; --line:#e7e4de;
-  --accent:#3a7d6e; --accent-soft:#e8f2ef; --warn-soft:#fbf3e6;
+  --bg:#faf9f7;--card:#fff;--ink:#1c1b1a;--muted:#6b6862;--line:#e7e4de;
+  --accent:#3a7d6e;--accent-soft:#e8f2ef;--warn:#b4791f;--warn-soft:#fbf3e6;
 }
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#16171a; --card:#1e2024; --ink:#eceae6; --muted:#9c9990; --line:#2c2f34;
-    --accent:#6fc2b0; --accent-soft:#1c2c29; --warn-soft:#2a2418; }
-}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#16171a;--card:#1e2024;--ink:#eceae6;--muted:#9c9990;--line:#2c2f34;
+  --accent:#6fc2b0;--accent-soft:#1c2c29;--warn:#d9a445;--warn-soft:#2a2418;}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font:18px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;}
-.wrap{max-width:680px;margin:0 auto;padding:28px 20px 80px}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);
-  border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin-bottom:22px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-h1{font-size:30px;line-height:1.2;margin:.2em 0 .1em;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:15px;margin-bottom:26px}
-h2{font-size:22px;margin:2em 0 .5em;letter-spacing:-.01em}
-h3{font-size:18px;margin:1.6em 0 .4em}
-p{margin:.7em 0}
-a{color:var(--accent)}
-strong{font-weight:650}
-.tldr{background:var(--accent-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:8px 0 6px}
-.tldr .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px}
-.tldr ul{margin:0;padding-left:20px}
-.tldr li{margin:.4em 0}
-blockquote{margin:1.2em 0;padding:12px 18px;border-left:3px solid var(--accent);
-  background:var(--card);border-radius:0 10px 10px 0;color:var(--ink)}
-hr{border:none;border-top:1px solid var(--line);margin:2em 0}
-ul,ol{padding-left:22px}
-li{margin:.35em 0}
-table{width:100%;border-collapse:collapse;margin:1.1em 0;font-size:15px;display:block;overflow-x:auto}
+  font:18px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:26px 20px 80px}
+.kicker{display:inline-block;font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:12px}
+h1{font-size:31px;line-height:1.18;margin:0 0 10px;letter-spacing:-.015em}
+.sub{color:var(--muted);font-size:16px;margin-bottom:18px}
+.ebadge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--warn);
+  background:var(--warn-soft);border:1px solid var(--line);border-radius:999px;padding:6px 13px;margin-bottom:24px}
+.ebadge svg{flex:0 0 auto}
+.tldr{background:var(--accent-soft);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:6px 0 10px}
+.tldr .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:9px}
+.tldr ul{margin:0;padding-left:20px}.tldr li{margin:.42em 0}
+.sec{display:flex;align-items:center;gap:11px;margin:2.1em 0 .5em}
+.sec .ic{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.sec h2{font-size:21px;margin:0;letter-spacing:-.01em}
+p{margin:.66em 0}
+.goals{display:flex;flex-wrap:wrap;gap:8px;margin:.8em 0}
+.goals span{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 13px;font-size:15px;font-weight:600}
+.formats{list-style:none;padding:0;margin:.6em 0}
+.formats li{padding:9px 0;border-bottom:1px solid var(--line);font-size:16px}
+.formats li:last-child{border:none}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:.7em 0}
+.pill{flex:1 1 150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.pill b{display:block;color:var(--accent);font-size:19px}
+.pill span{font-size:14px;color:var(--muted)}
+.hyp{display:flex;flex-wrap:wrap;gap:8px;margin:.7em 0}
+.hyp span{background:var(--accent-soft);border-radius:8px;padding:6px 11px;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:1em 0;font-size:15px;display:block;overflow-x:auto}
 th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
-th{background:var(--accent-soft)}
-details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:1em 0}
-summary{cursor:pointer;padding:12px 0;font-weight:600;color:var(--accent)}
-.check{list-style:none;padding-left:0}
-.check li{padding-left:30px;position:relative;margin:.55em 0}
-.check li::before{content:"☐";position:absolute;left:0;color:var(--accent);font-size:19px;top:-1px}
-.kicker{background:var(--warn-soft);border-radius:10px;padding:2px 16px;margin:1em 0}
-footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-.lead{font-size:19px}
+th{background:var(--warn-soft)}
+.steps{list-style:none;counter-reset:s;padding:0;margin:.7em 0}
+.steps li{counter-increment:s;position:relative;padding:11px 0 11px 44px;border-bottom:1px solid var(--line)}
+.steps li:last-child{border:none}
+.steps li::before{content:counter(s);position:absolute;left:0;top:9px;width:28px;height:28px;border-radius:8px;
+  background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+@media (prefers-color-scheme:dark){.steps li::before{color:#12130f}}
+.pullquote{font-size:20px;line-height:1.5;font-weight:600;border-left:4px solid var(--accent);
+  padding:6px 0 6px 20px;margin:1.6em 0;color:var(--ink)}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<span class="badge"><span class="dot"></span> AI-native · черновик · ждёт клинического ревью</span>
-
+<span class="kicker">Техники · фокус</span>
 <h1>Body doubling при СДВГ: почему рядом с кем-то дела идут легче</h1>
-<div class="sub">Кластер «техники» · уровень доверия L1 · демо-материал ньюсрума</div>
+<div class="sub">Делаешь дело рядом с человеком — и оно идёт. Что это, как делать и стоит ли верить громким цифрам.</div>
+<span class="ebadge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Доказательная база: тонкая</span>
 
 <div class="tldr">
   <div class="lbl">TL;DR</div>
   <ul>
-    <li><strong>Что это:</strong> body doubling — когда ты делаешь дело рядом с другим человеком. Он ничего не контролирует и не помогает, просто есть в кадре: лично, по видео или онлайн. По отзывам самих людей с СДВГ, это часто снижает порог «начать» (строгих доказательств пока мало — см. ниже).</li>
-    <li>Прямых крупных исследований именно про body doubling и СДВГ почти нет: один опрос на ~220 человек и одно крохотное VR-исследование.</li>
-    <li>Работает не для всех и не для любых задач. Честные оговорки — тоже ниже.</li>
+    <li>Делаешь дело рядом с человеком. Он не контролирует и не помогает — просто в кадре: лично, по видео или онлайн.</li>
+    <li>По отзывам людей с СДВГ — часто снижает порог «начать». Строгих доказательств пока мало.</li>
+    <li>Крупных прямых исследований почти нет: один опрос на ~220 человек и одно крохотное VR-исследование.</li>
+    <li>Работает не для всех и не для любых задач.</li>
   </ul>
 </div>
 
-<hr>
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg></span><h2>Что это вообще такое</h2></div>
+<p>Ты делаешь скучную отложенную задачу. Рядом сидит человек — и дело идёт.</p>
+<p>Он не помогает и не подгоняет. Он «якорь» для внимания в настоящем моменте.</p>
+<p>Более широкое определение — «parallel working»: партнёр не обязан делать то же, что ты.</p>
+<p>Патриция Куинн, соосновательница National Center for Girls and Women with ADHD: body double — это тот, кто сидит рядом, пока ты делаешь то, что в одиночку сделать трудно.</p>
+<p>Люди берутся за это ради трёх вещей:</p>
+<div class="goals"><span>начать задачу</span><span>не растерять мотивацию</span><span>дотащить до конца</span></div>
 
-<h2>Что это вообще такое</h2>
-<p class="lead"><strong>Ты делаешь скучную отложенную задачу, а рядом просто сидит человек — и дело идёт.</strong> Он не помогает и не подгоняет, он «якорь» для внимания в настоящем моменте. Есть и более широкое определение — «parallel working»: партнёр не обязан делать то же, что ты, важен сам факт, что он есть.</p>
-<p>Патриция Куинн, соосновательница National Center for Girls and Women with ADHD, формулирует просто: body double — это тот, кто сидит рядом, пока ты делаешь то, что в одиночку сделать трудно.</p>
-<p><strong>Люди берутся за это ради трёх вещей:</strong></p>
-<ul>
-  <li><strong>начать задачу</strong> — для многих это главная боль;</li>
-  <li><strong>не растерять мотивацию</strong> посреди процесса;</li>
-  <li><strong>дотащить дело до конца</strong>, когда уже тянет всё бросить.</li>
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span><h2>Как это делать: форматы</h2></div>
+<ul class="formats">
+  <li><b>Очно</b> — дома, в кафе, в библиотеке.</li>
+  <li><b>Видеозвонок один на один</b> с камерой — Zoom, FaceTime.</li>
+  <li><b>Сервисы:</b> Focusmate, Flow Club, FLOWN, Deepwrk.</li>
+  <li><b>Тихие групповые созвоны.</b></li>
+  <li><b>«Clean With Me»-видео</b> — асинхронный вариант.</li>
+  <li><b>Комбо с Pomodoro.</b></li>
 </ul>
 
-<h2>Как это делать: форматы</h2>
-<p><strong>Выбери формат — и просто начни, глубокая теория не нужна.</strong></p>
-<ul>
-  <li><strong>Очно</strong> — дома, в кафе, в библиотеке.</li>
-  <li><strong>Видеозвонок один на один</strong> с включённой камерой — Zoom, FaceTime.</li>
-  <li><strong>Специализированные сервисы:</strong> Focusmate, Flow Club, FLOWN, Deepwrk.</li>
-  <li><strong>Тихие групповые созвоны</strong> — заходишь и выходишь когда угодно.</li>
-  <li><strong>«Clean With Me»-видео</strong> — записанный, асинхронный вариант double.</li>
-  <li><strong>Комбо с Pomodoro</strong> — циклы работы и отдыха по таймеру в присутствии партнёра.</li>
-</ul>
-
-<h2>Сколько по времени</h2>
-<p><strong>Начни с короткой сессии — 20 минут хватает, чтобы сдвинуться.</strong> Cleveland Clinic предлагает три варианта: <strong>20–30 мин</strong> — быстрый толчок; <strong>45–60 мин</strong> — самый популярный формат; <strong>до 90 мин</strong> — под крупные проекты.</p>
-
-<h2>Кого выбирать в пару (и когда это не сработает)</h2>
-<p><strong>Бери партнёра, который не будет болтать, — это главное условие.</strong> Друзья и знакомые часто скатываются в разговор вместо тихой параллельной работы, и весь эффект ломается.</p>
-<p><strong>Метод не универсален — и это нормально.</strong> Часть людей с СДВГ ловят от чужого присутствия не помощь, а отвлечение. Если после пары честных попыток становится только хуже — это не ваш инструмент, и ничего страшного.</p>
-
-<hr>
-
-<h2>А это вообще работает? Честный разбор доказательств</h2>
-<blockquote>Если коротко: прямых исследований почти нет, всё остальное — перенос смежных эффектов. Дальше — детали, можно листать.</blockquote>
-
-<h3>Прямых исследований почти нет</h3>
-<p><strong>Строгих доказательств эффективности body doubling нет — так прямым текстом пишет ADDA.</strong> Первое рецензируемое исследование именно про body doubling появилось только в 2023–2024 годах; до этого практика жила как народное знание сообщества.</p>
-<ul>
-  <li><strong>Опрос ~220 нейроотличных людей</strong> — самоотчёт о том, как они используют метод.</li>
-  <li><strong>VR-эксперимент 2025 года на 12 участниках</strong> — с любым «даблом» (человек или ИИ) задача шла быстрее; единого «лучшего» формата не нашли.</li>
-</ul>
-
-<h3>Четыре гипотезы, почему это работает</h3>
-<p>Механизм точно не доказан — это правдоподобные гипотезы, а не установленные факты:</p>
-<table>
-<tr><th>Гипотеза</th><th>Суть в одном предложении</th></tr>
-<tr><td>Внешняя исполнительная функция</td><td>Человек рядом, предположительно, временно «держит фокус» за тебя.</td></tr>
-<tr><td>Дофамин и порог запуска</td><td>Позитивный социальный контакт, по гипотезе, поднимает дофамин и снижает порог «начать».</td></tr>
-<tr><td>Мягкая подотчётность</td><td>Присутствие другого напоминает о деле без давления и контроля.</td></tr>
-<tr><td>Зеркальные нейроны (спорно)</td><td>Наблюдение за сосредоточенным, возможно, подталкивает к тому же — но их существование у людей оспаривают.</td></tr>
-</table>
-
-<div class="kicker">
-<h3>Каким цифрам не верить</h3>
-<p>Почти все громкие проценты про body doubling — это либо реклама сервиса, либо чужие исследования не про СДВГ.</p>
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h2>Сколько по времени</h2></div>
+<p>Cleveland Clinic предлагает три варианта:</p>
+<div class="pills">
+  <div class="pill"><b>20–30 мин</b><span>быстрый толчок</span></div>
+  <div class="pill"><b>45–60 мин</b><span>самый популярный</span></div>
+  <div class="pill"><b>до 90 мин</b><span>крупные проекты</span></div>
 </div>
+
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M15 19c0-2 .8-3.6 2.2-4.4"/></svg></span><h2>Кого выбирать в пару</h2></div>
+<p><b>Бери партнёра, который не будет болтать.</b> Это главное условие.</p>
+<p>Друзья часто скатываются в разговор вместо тихой параллельной работы — и весь эффект ломается.</p>
+<p>Метод не универсален. Часть людей с СДВГ ловят от чужого присутствия не помощь, а отвлечение.</p>
+<p>Если после пары честных попыток становится только хуже — это не ваш инструмент.</p>
+
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></span><h2>А это вообще работает? Честный разбор</h2></div>
+<p>Строгих доказательств эффективности нет. Так пишет ADDA. Первое рецензируемое исследование именно про body doubling появилось только в 2023–2024 годах.</p>
+<p>Что есть: опрос ~220 нейроотличных людей (самоотчёт); VR-эксперимент 2025 года на 12 участниках — с любым «даблом» (человек или ИИ) задача шла быстрее. Единого «лучшего» формата не нашли.</p>
+<p>Механизм не доказан. Есть гипотезы:</p>
+<div class="hyp"><span>внешняя исполнительная функция</span><span>дофамин и порог запуска</span><span>мягкая подотчётность</span><span>зеркальные нейроны (спорно)</span></div>
+<p><b>Каким цифрам не верить:</b></p>
 <table>
-<tr><th>Цифра</th><th>Откуда</th><th>Верить?</th></tr>
-<tr><td>+143%, +161%, 96% доводят до конца</td><td>Внутренний опрос Focusmate про себя</td><td>Нет — смещение выборки</td></tr>
-<tr><td>+230–310% эффективности</td><td>Focusmate ← Fehr &amp; Gächter (2000)</td><td>Нет — там про вклады в общий фонд</td></tr>
-<tr><td>улучшение на 16–32%</td><td>Focusmate ← Falk &amp; Ichino</td><td>Нет — в оригинале только 16,3%</td></tr>
+<tr><th>Цифра</th><th>Что на самом деле</th></tr>
+<tr><td>+143%, +161%, 96% доводят до конца</td><td>внутренний опрос Focusmate про себя (смещение выборки)</td></tr>
+<tr><td>+230–310%</td><td>Focusmate ← Fehr &amp; Gächter (2000) — там про вклады в общий фонд</td></tr>
+<tr><td>16–32%</td><td>в оригинале Falk &amp; Ichino только 16,3%</td></tr>
 </table>
 
-<hr>
-
-<h2>Что сделать прямо сейчас</h2>
-<ul class="check">
-  <li>Выбери один формат — очно, видеозвонок или сервис вроде Focusmate.</li>
+<div class="sec"><span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h2>Что сделать прямо сейчас</h2></div>
+<ol class="steps">
+  <li>Выбери один формат.</li>
   <li>Поставь таймер на 20 минут.</li>
-  <li>Возьми партнёра, который не будет болтать (или включи «Clean With Me»-видео).</li>
+  <li>Возьми партнёра, который не будет болтать.</li>
   <li>Назови вслух одну задачу — и начинай.</li>
-  <li>Не зашло после пары попыток? Спокойно закрывай — это просто не твой инструмент.</li>
-</ul>
+  <li>Не зашло после пары попыток — спокойно закрывай.</li>
+</ol>
 
-<blockquote><strong>Итог одной честной фразой.</strong> Прямая доказательная база пока тонкая: один опрос на ~220 человек и один VR-эксперимент на 12 людях. Большинство «научных» аргументов у сервисов — перенос не-ADHD эффектов. Первые единичные исследования показывают положительное направление, база пока ограничена — а годы личных свидетельств говорят, что рядом с кем-то дела и правда идут легче.</blockquote>
+<div class="pullquote">Прямая доказательная база тонкая — один опрос и один VR-эксперимент. Но годы личных свидетельств говорят: рядом с кем-то дела идут легче.</div>
 
 <footer>
   Не является медицинской рекомендацией. Перед решениями о здоровье проконсультируйтесь со специалистом.
