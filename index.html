@@ -1,40 +1,28 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ADHD Newsroom — свёрстанные материалы</title>
-<style>
-:root{--bg:#faf9f7;--card:#fff;--ink:#1c1b1a;--muted:#6b6862;--line:#e7e4de;--accent:#3a7d6e;--accent-soft:#e8f2ef}
-@media (prefers-color-scheme: dark){:root{--bg:#16171a;--card:#1e2024;--ink:#eceae6;--muted:#9c9990;--line:#2c2f34;--accent:#6fc2b0;--accent-soft:#1c2c29}}
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ADHD Newsroom — материалы</title><style>
+:root{--bg:#faf9f7;--card:#fff;--ink:#1c1b1a;--muted:#6b6862;--line:#e7e4de;--accent:#3a7d6e;--accent-soft:#e8f2ef;--warn-soft:#fbf3e6}
+@media (prefers-color-scheme:dark){:root{--bg:#16171a;--card:#1e2024;--ink:#eceae6;--muted:#9c9990;--line:#2c2f34;--accent:#6fc2b0;--accent-soft:#1c2c29;--warn-soft:#2a2418}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-.wrap{max-width:680px;margin:0 auto;padding:40px 20px 80px}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-h1{font-size:30px;letter-spacing:-.01em;margin:.5em 0 .1em}
-.sub{color:var(--muted);margin-bottom:32px}
-a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0;transition:border-color .15s}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:26px 20px 80px}
+.kicker{display:inline-block;font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:12px}
+a.back{display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-size:14px}
+h1{font-size:30px;line-height:1.2;margin:0 0 16px;letter-spacing:-.015em}
+h2{font-size:21px;margin:0;letter-spacing:-.01em}
+.sec{border-left:3px solid var(--accent);padding-left:12px;margin:1.9em 0 .5em}
+h3{font-size:17px;margin:1.5em 0 .3em}
+p{margin:.66em 0}
+strong{font-weight:650}
+ul,ol{padding-left:22px}li{margin:.35em 0}
+.tldr{background:var(--accent-soft);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:6px 0 14px}
+.tldr .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:9px}
+.tldr ul{margin:0}
+table{width:100%;border-collapse:collapse;margin:1em 0;font-size:15px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--warn-soft)}
+hr{border:none;border-top:1px solid var(--line);margin:1.6em 0}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:13px 0;transition:border-color .15s}
 a.card:hover{border-color:var(--accent)}
-a.card h2{margin:0 0 6px;font-size:20px;color:var(--accent)}
-a.card p{margin:0;color:var(--muted);font-size:15px}
-footer{margin-top:50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
-</style>
-</head>
-<body>
-<div class="wrap">
-<span class="badge"><span class="dot"></span> AI-native ADHD Newsroom · предпросмотр</span>
-<h1>Свёрстанные материалы</h1>
-<div class="sub">Страница для удалённого просмотра черновиков, прошедших через пайплайн ньюсрума.</div>
-
-<a class="card" href="body-doubling.html">
-  <h2>Body doubling при СДВГ</h2>
-  <p>Почему рядом с кем-то дела идут легче. Кластер «техники» · L1 · ожидает клинического ревью.</p>
-</a>
-
-<footer>
-  Материалы генерируются AI-редакцией и проходят автоматические гейты (факт-гейт, симулятор СДВГ-читателя). Health-adjacent материалы публикуются только после подписи живого ревьюера. Демонстрационная площадка.
-</footer>
-</div>
-</body>
-</html>
+a.card h2{margin:0 0 5px;font-size:19px;color:var(--accent)}
+a.card p{margin:0;color:var(--muted);font-size:14px}</style></head><body><div class="wrap"><span class="kicker">ADHD Newsroom</span><h1>Материалы</h1><p style="color:var(--muted);margin-bottom:26px">Четыре статьи — четыре голоса под четыре кластера. Каждая прошла факт-гейт и симулятор СДВГ-читателя.</p><a class="card" href="body-doubling.html"><h2>Body doubling при СДВГ</h2><p>Техники · голос «Про Каренина»</p></a><a class="card" href="task-manager-adhd.html"><h2>Как настроить таск-менеджер под СДВГ-мозг</h2><p>Инструменты · голос «Логи и Багги»</p></a><a class="card" href="adhd-paralysis.html"><h2>СДВГ-паралич: почему не можешь начать</h2><p>Мотивация · голос «Между Дедлайнов»</p></a><a class="card" href="telling-others-adhd.html"><h2>Как рассказать близким, что у тебя СДВГ</h2><p>Эмоции · голос «Тихий Кадр»</p></a><footer>Не является медицинской рекомендацией. Перед решениями о здоровье проконсультируйтесь со специалистом.</footer></div></body></html>
